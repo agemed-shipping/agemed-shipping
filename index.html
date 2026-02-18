@@ -100,10 +100,14 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-          <a href="#contact" class="rounded-lg bg-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-400" data-i18n="topCta">Talk to us</a>
+          <a href="#contact" class="hidden rounded-lg bg-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-400 md:inline-flex" data-i18n="topCta">Talk to us</a>
         </div>
       </div>
     </header>
+
+    <div class="fixed inset-x-0 bottom-4 z-50 flex justify-center px-4 md:hidden pointer-events-none">
+      <a href="#contact" class="pointer-events-auto inline-flex items-center justify-center rounded-full bg-brand-500/95 px-5 py-3 text-sm font-semibold text-white shadow-glow backdrop-blur transition hover:bg-brand-400" data-i18n="topCta">Talk to us</a>
+    </div>
 
     <div id="mobile-menu" class="fixed inset-x-0 top-[72px] z-40 hidden border-b border-white/10 bg-slate-950/95 px-6 py-4 backdrop-blur-xl md:hidden">
       <nav class="flex flex-col gap-3 text-sm text-slate-200">
