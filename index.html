@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agemed Shipping | Algerian Hydrocarbon Port Agency</title>
+  <meta name="description" content="Agemed Shipping is a trusted agency operating across Algerian hydrocarbon ports, coordinating tanker calls, tug assistance, compliance formalities, and critical vessel support services." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#eef7ff',
+              100: '#d9ecff',
+              200: '#bce0ff',
+              300: '#8dcfff',
+              400: '#56b5ff',
+              500: '#2b94ff',
+              600: '#0f74f0',
+              700: '#0c5dcb',
+              800: '#114ea4',
+              900: '#144380'
+            }
+          },
+          boxShadow: {
+            glow: '0 10px 50px rgba(43, 148, 255, 0.3)'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html {
+      scroll-padding-top: 6rem;
+      scroll-behavior: smooth;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-brand-500/40">
+  <div class="fixed inset-0 -z-20 overflow-hidden">
+    <video
+      id="bg-video"
+      class="h-full w-full object-cover"
+      autoplay
+      muted
+      playsinline
+      preload="metadata"
+      poster="./assets/harbor-poster.jpg"
+      aria-label="Background industrial timelapse"
+    >
+      Your browser does not support background video playback.
+    </video>
+  </div>
+  <div class="fixed inset-0 -z-10 bg-slate-950/75"></div>
+  <div class="fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(43,148,255,0.28),_transparent_45%)]"></div>
+
+  <div class="relative overflow-hidden">
+    <header class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+        <a href="#" class="flex items-center gap-3">
+          <span class="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-brand-500/20 ring-1 ring-brand-400/30">
+            <span class="text-lg font-extrabold tracking-wide text-brand-200">A</span>
+          </span>
+          <span class="text-lg font-semibold tracking-wide" data-i18n="brandName">Agemed Shipping</span>
+        </a>
+        <nav class="hidden items-center gap-8 text-sm text-slate-300 md:flex">
+          <a href="#" class="transition hover:text-white" aria-label="Home">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5L12 3l9 7.5" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 9.75V20.25H9.75V15H14.25V20.25H18.75V9.75" />
+            </svg>
+          </a>
+          <a href="#operations" class="transition hover:text-white" data-i18n="navOperations">Operations</a>
+          <a href="#capabilities" class="transition hover:text-white" data-i18n="navCapabilities">Capabilities</a>
+          <a href="#safety" class="transition hover:text-white" data-i18n="navSafety">Safety</a>
+          <a href="#contact" class="transition hover:text-white" data-i18n="navContact">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <div class="hidden items-center rounded-lg border border-white/15 bg-slate-900/40 p-1 md:flex">
+            <button type="button" class="locale-btn rounded-md px-2 py-1 text-xs font-semibold text-white transition" data-locale="en">EN</button>
+            <button type="button" class="locale-btn rounded-md px-2 py-1 text-xs font-semibold text-slate-300 transition hover:text-white" data-locale="fr">FR</button>
+          </div>
+          <button
+            id="mobile-menu-toggle"
+            type="button"
+            class="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 bg-slate-900/50 text-slate-200 transition hover:text-white md:hidden"
+            aria-label="Open menu"
+            aria-controls="mobile-menu"
+            aria-expanded="false"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <a href="#contact" class="rounded-lg bg-brand-500 px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:bg-brand-400" data-i18n="topCta">Talk to us</a>
+        </div>
+      </div>
+    </header>
+
+    <div id="mobile-menu" class="fixed inset-x-0 top-[72px] z-40 hidden border-b border-white/10 bg-slate-950/95 px-6 py-4 backdrop-blur-xl md:hidden">
+      <nav class="flex flex-col gap-3 text-sm text-slate-200">
+        <a href="#" class="flex items-center gap-2 rounded-md px-2 py-2 transition hover:bg-white/5">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3 10.5L12 3l9 7.5" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 9.75V20.25H9.75V15H14.25V20.25H18.75V9.75" />
+          </svg>
+          <span data-i18n="navHome">Home</span>
+        </a>
+        <a href="#operations" class="rounded-md px-2 py-2 transition hover:bg-white/5" data-i18n="navOperations">Operations</a>
+        <a href="#capabilities" class="rounded-md px-2 py-2 transition hover:bg-white/5" data-i18n="navCapabilities">Capabilities</a>
+        <a href="#safety" class="rounded-md px-2 py-2 transition hover:bg-white/5" data-i18n="navSafety">Safety</a>
+        <a href="#contact" class="rounded-md px-2 py-2 transition hover:bg-white/5" data-i18n="navContact">Contact</a>
+      </nav>
+      <div class="mt-4 flex items-center rounded-lg border border-white/15 bg-slate-900/40 p-1">
+        <button type="button" class="locale-btn w-full rounded-md px-2 py-1 text-xs font-semibold text-white transition" data-locale="en">EN</button>
+        <button type="button" class="locale-btn w-full rounded-md px-2 py-1 text-xs font-semibold text-slate-300 transition hover:text-white" data-locale="fr">FR</button>
+      </div>
+    </div>
+
+    <main class="pt-20">
+      <section class="relative">
+        <div class="mx-auto grid min-h-[85vh] max-w-7xl items-center gap-12 px-6 py-20 lg:px-8">
+          <div>
+            <p class="mb-4 inline-flex rounded-full border border-brand-400/30 bg-brand-500/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-brand-200" data-i18n="heroKicker">Algerian hydrocarbon port agency</p>
+            <h1 class="text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl" data-i18n="heroTitle">
+              Every tanker call handled with precision, speed, and total control.
+            </h1>
+            <p class="mt-6 max-w-xl text-lg text-slate-300" data-i18n="heroText">
+              Agemed Shipping coordinates dockings and undockings at Algerian hydrocarbon energy ports, manages all port and administrative formalities, and ensures tugboats, crew supplies, and critical support are delivered on time.
+            </p>
+            <div class="mt-10 flex flex-wrap gap-4">
+              <a href="#contact" class="rounded-xl bg-brand-500 px-6 py-3 font-semibold text-white transition hover:bg-brand-400" data-i18n="heroPrimaryCta">Plan your next port call</a>
+              <a href="#operations" class="rounded-xl border border-white/20 px-6 py-3 font-semibold text-slate-200 transition hover:border-white/40 hover:text-white" data-i18n="heroSecondaryCta">See our operations</a>
+            </div>
+            <dl class="mt-12 grid grid-cols-3 gap-6 border-t border-white/10 pt-8 text-sm">
+              <div>
+                <dt class="text-slate-400" data-i18n="metric1Label">Port Calls Coordinated</dt>
+                <dd class="mt-2 text-2xl font-semibold text-white">600+</dd>
+              </div>
+              <div>
+                <dt class="text-slate-400" data-i18n="metric2Label">On-Time Execution</dt>
+                <dd class="mt-2 text-2xl font-semibold text-white">99.2%</dd>
+              </div>
+              <div>
+                <dt class="text-slate-400" data-i18n="metric3Label">Response Availability</dt>
+                <dd class="mt-2 text-2xl font-semibold text-white">24/7</dd>
+              </div>
+            </dl>
+            <p class="mt-8 max-w-lg rounded-xl border border-white/15 bg-slate-900/45 px-4 py-3 text-sm text-slate-300 backdrop-blur" data-i18n="heroNote">
+              From pre-arrival clearances to final departure formalities, our operators anticipate operational risks, resolve unforeseen issues fast, and keep your vessel schedule protected.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="operations" class="border-y border-white/10 bg-slate-900/40 py-20">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mb-12 flex flex-wrap items-end justify-between gap-6">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.2em] text-brand-200" data-i18n="operationsKicker">Operations</p>
+              <h2 class="mt-3 text-3xl font-bold text-white sm:text-4xl" data-i18n="operationsTitle">Execution discipline at every stage of the port call</h2>
+            </div>
+            <p class="max-w-2xl text-slate-300" data-i18n="operationsText">We synchronize port authorities, terminal operators, tug services, and suppliers so your tanker operation moves safely, compliantly, and without avoidable delay.</p>
+          </div>
+
+          <div class="grid gap-6 md:grid-cols-3">
+            <article class="rounded-2xl border border-white/10 bg-slate-950/60 p-6">
+              <h3 class="text-lg font-semibold text-white" data-i18n="service1Title">Docking & Undocking Coordination</h3>
+              <p class="mt-3 text-slate-300" data-i18n="service1Text">Precise sequencing of pilotage, berth windows, and tugboat deployment for safe vessel movements in and out of terminal zones.</p>
+            </article>
+            <article class="rounded-2xl border border-white/10 bg-slate-950/60 p-6">
+              <h3 class="text-lg font-semibold text-white" data-i18n="service2Title">Agency & Administrative Formalities</h3>
+              <p class="mt-3 text-slate-300" data-i18n="service2Text">Complete management of documentation, customs and immigration coordination, and regulatory clearances with zero compliance compromise.</p>
+            </article>
+            <article class="rounded-2xl border border-white/10 bg-slate-950/60 p-6">
+              <h3 class="text-lg font-semibold text-white" data-i18n="service3Title">Vessel Support & Contingency Response</h3>
+              <p class="mt-3 text-slate-300" data-i18n="service3Text">On-time crew provisions, food and technical supplies, with rapid escalation handling for weather, schedule, or operational disruptions.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="capabilities" class="py-20">
+        <div class="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-2 lg:px-8">
+          <div class="rounded-2xl border border-white/10 bg-slate-900/40 p-8">
+            <h3 class="text-2xl font-bold text-white" data-i18n="capabilitiesTitle">Why tanker operators choose Agemed Shipping</h3>
+            <ul class="mt-6 space-y-4 text-slate-300">
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-brand-400"></span><span data-i18n="capability1">Experienced local operators with deep knowledge of Algerian hydrocarbon port procedures.</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-brand-400"></span><span data-i18n="capability2">Single-point operational control that keeps all stakeholders aligned in real time.</span></li>
+              <li class="flex gap-3"><span class="mt-2 h-2 w-2 rounded-full bg-brand-400"></span><span data-i18n="capability3">Proactive contingency management to protect safety, compliance, and schedule integrity.</span></li>
+            </ul>
+          </div>
+          <div id="safety" class="rounded-2xl border border-white/10 bg-slate-900/40 p-8">
+            <h3 class="text-2xl font-bold text-white" data-i18n="safetyTitle">Safety and compliance without compromise</h3>
+            <p class="mt-4 text-slate-300" data-i18n="safetyText">Every operation is executed against strict marine safety standards, terminal rules, and agency protocols to reduce exposure and maintain uninterrupted vessel handling.</p>
+            <div class="mt-6 grid grid-cols-2 gap-4 text-sm">
+              <div class="rounded-xl border border-white/10 bg-slate-950/60 p-4">
+                <p class="text-slate-400" data-i18n="safetyMetric1Label">Operational Incident Rate</p>
+                <p class="mt-2 text-xl font-semibold text-white" data-i18n="safetyMetric1Value">Near-Zero</p>
+              </div>
+              <div class="rounded-xl border border-white/10 bg-slate-950/60 p-4">
+                <p class="text-slate-400" data-i18n="safetyMetric2Label">Regulatory Compliance</p>
+                <p class="mt-2 text-xl font-semibold text-white" data-i18n="safetyMetric2Value">Strictly Maintained</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="pb-24">
+        <div class="mx-auto max-w-4xl rounded-3xl border border-white/10 bg-gradient-to-br from-brand-900/40 to-slate-900/80 p-8 shadow-2xl lg:p-12">
+          <h2 class="text-3xl font-bold text-white" data-i18n="contactTitle">Secure your next Algerian port call with confidence</h2>
+          <p class="mt-3 text-slate-300" data-i18n="contactText">Share your vessel schedule and operational requirements. Our team will respond quickly with a clear execution plan.</p>
+
+          <form class="mt-8 grid gap-4 sm:grid-cols-2">
+            <input type="text" placeholder="Full name" data-i18n-placeholder="contactNamePlaceholder" class="w-full rounded-xl border border-white/15 bg-slate-950/70 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-400 focus:outline-none" />
+            <input type="email" placeholder="Work email" data-i18n-placeholder="contactEmailPlaceholder" class="w-full rounded-xl border border-white/15 bg-slate-950/70 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-400 focus:outline-none" />
+            <input type="text" placeholder="Company / Vessel Operator" data-i18n-placeholder="contactCompanyPlaceholder" class="w-full rounded-xl border border-white/15 bg-slate-950/70 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-400 focus:outline-none sm:col-span-2" />
+            <textarea rows="4" placeholder="Tell us your ETA, port, vessel needs, and required support services" data-i18n-placeholder="contactMessagePlaceholder" class="w-full rounded-xl border border-white/15 bg-slate-950/70 px-4 py-3 text-white placeholder:text-slate-500 focus:border-brand-400 focus:outline-none sm:col-span-2"></textarea>
+            <button type="button" class="rounded-xl bg-brand-500 px-6 py-3 font-semibold text-white transition hover:bg-brand-400 sm:col-span-2" data-i18n="contactButton">Request operational support</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 py-8">
+      <div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-6 text-sm text-slate-400 lg:px-8">
+        <p data-i18n="footerLeft">© 2026 Agemed Shipping. All rights reserved.</p>
+        <p data-i18n="footerRight">Trusted agency operations for Algerian hydrocarbon ports.</p>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const i18n = {
+      en: {
+        pageTitle: 'Agemed Shipping | Algerian Hydrocarbon Port Agency',
+        pageDescription: 'Agemed Shipping is a trusted agency operating across Algerian hydrocarbon ports, coordinating tanker calls, tug assistance, compliance formalities, and critical vessel support services.',
+        brandName: 'Agemed Shipping',
+        navHome: 'Home',
+        navOperations: 'Operations',
+        navCapabilities: 'Capabilities',
+        navSafety: 'Safety',
+        navContact: 'Contact',
+        topCta: 'Talk to us',
+        heroKicker: 'Algerian hydrocarbon port agency',
+        heroTitle: 'Every tanker call handled with precision, speed, and total control.',
+        heroText: 'Agemed Shipping coordinates dockings and undockings at Algerian hydrocarbon energy ports, manages all port and administrative formalities, and ensures tugboats, crew supplies, and critical support are delivered on time.',
+        heroPrimaryCta: 'Plan your next port call',
+        heroSecondaryCta: 'See our operations',
+        metric1Label: 'Port Calls Coordinated',
+        metric2Label: 'On-Time Execution',
+        metric3Label: 'Response Availability',
+        heroNote: 'From pre-arrival clearances to final departure formalities, our operators anticipate operational risks, resolve unforeseen issues fast, and keep your vessel schedule protected.',
+        operationsKicker: 'Operations',
+        operationsTitle: 'Execution discipline at every stage of the port call',
+        operationsText: 'We synchronize port authorities, terminal operators, tug services, and suppliers so your tanker operation moves safely, compliantly, and without avoidable delay.',
+        service1Title: 'Docking & Undocking Coordination',
+        service1Text: 'Precise sequencing of pilotage, berth windows, and tugboat deployment for safe vessel movements in and out of terminal zones.',
+        service2Title: 'Agency & Administrative Formalities',
+        service2Text: 'Complete management of documentation, customs and immigration coordination, and regulatory clearances with zero compliance compromise.',
+        service3Title: 'Vessel Support & Contingency Response',
+        service3Text: 'On-time crew provisions, food and technical supplies, with rapid escalation handling for weather, schedule, or operational disruptions.',
+        capabilitiesTitle: 'Why tanker operators choose Agemed Shipping',
+        capability1: 'Experienced local operators with deep knowledge of Algerian hydrocarbon port procedures.',
+        capability2: 'Single-point operational control that keeps all stakeholders aligned in real time.',
+        capability3: 'Proactive contingency management to protect safety, compliance, and schedule integrity.',
+        safetyTitle: 'Safety and compliance without compromise',
+        safetyText: 'Every operation is executed against strict marine safety standards, terminal rules, and agency protocols to reduce exposure and maintain uninterrupted vessel handling.',
+        safetyMetric1Label: 'Operational Incident Rate',
+        safetyMetric1Value: 'Near-Zero',
+        safetyMetric2Label: 'Regulatory Compliance',
+        safetyMetric2Value: 'Strictly Maintained',
+        contactTitle: 'Secure your next Algerian port call with confidence',
+        contactText: 'Share your vessel schedule and operational requirements. Our team will respond quickly with a clear execution plan.',
+        contactNamePlaceholder: 'Full name',
+        contactEmailPlaceholder: 'Work email',
+        contactCompanyPlaceholder: 'Company / Vessel Operator',
+        contactMessagePlaceholder: 'Tell us your ETA, port, vessel needs, and required support services',
+        contactButton: 'Request operational support',
+        footerLeft: '© 2026 Agemed Shipping. All rights reserved.',
+        footerRight: 'Trusted agency operations for Algerian hydrocarbon ports.'
+      },
+      fr: {
+        pageTitle: 'Agemed Shipping | Agence Portuaire Hydrocarbures en Algérie',
+        pageDescription: 'Agemed Shipping est une agence de confiance opérant dans les ports algériens d’hydrocarbures, coordonnant les escales de tankers, l’assistance des remorqueurs, les formalités de conformité et les services critiques au navire.',
+        brandName: 'Agemed Shipping',
+        navHome: 'Accueil',
+        navOperations: 'Opérations',
+        navCapabilities: 'Expertise',
+        navSafety: 'Sécurité',
+        navContact: 'Contact',
+        topCta: 'Nous contacter',
+        heroKicker: 'Agence portuaire hydrocarbures en Algérie',
+        heroTitle: 'Chaque escale tanker est gérée avec précision, rapidité et maîtrise totale.',
+        heroText: 'Agemed Shipping coordonne les accostages et désaccostages dans les ports énergétiques algériens d’hydrocarbures, prend en charge l’ensemble des formalités portuaires et administratives, et garantit la disponibilité des remorqueurs, des vivres et des fournitures techniques dans les délais.',
+        heroPrimaryCta: 'Planifier votre prochaine escale',
+        heroSecondaryCta: 'Voir nos opérations',
+        metric1Label: 'Escale Coordonnées',
+        metric2Label: 'Exécution dans les Délais',
+        metric3Label: 'Disponibilité',
+        heroNote: 'Des autorisations pré-arrivée aux formalités de départ, nos opérateurs anticipent les risques, traitent rapidement les imprévus et protègent votre planning navire.',
+        operationsKicker: 'Opérations',
+        operationsTitle: 'Rigueur d’exécution à chaque étape de l’escale',
+        operationsText: 'Nous synchronisons autorités portuaires, terminaux, remorqueurs et fournisseurs afin que votre opération tanker se déroule en sécurité, en conformité et sans retard évitable.',
+        service1Title: 'Coordination Accostage & Désaccostage',
+        service1Text: 'Séquençage précis du pilotage, des créneaux de poste à quai et du déploiement des remorqueurs pour des mouvements navire sûrs.',
+        service2Title: 'Formalités d’Agence & Administratives',
+        service2Text: 'Gestion complète des documents, coordination douane et immigration, et obtention des autorisations réglementaires sans compromis de conformité.',
+        service3Title: 'Support Navire & Gestion des Imprévus',
+        service3Text: 'Approvisionnement ponctuel en vivres et fournitures techniques, avec prise en charge rapide des aléas météo, planning ou opérations.',
+        capabilitiesTitle: 'Pourquoi les opérateurs tanker choisissent Agemed Shipping',
+        capability1: 'Des opérateurs locaux expérimentés avec une excellente maîtrise des procédures portuaires hydrocarbures en Algérie.',
+        capability2: 'Un pilotage opérationnel centralisé qui maintient tous les intervenants alignés en temps réel.',
+        capability3: 'Une gestion proactive des imprévus pour protéger la sécurité, la conformité et l’intégrité du planning.',
+        safetyTitle: 'Sécurité et conformité sans compromis',
+        safetyText: 'Chaque opération est menée selon des standards maritimes stricts, les règles terminales et les protocoles d’agence afin de réduire l’exposition au risque et d’assurer la continuité des manœuvres.',
+        safetyMetric1Label: 'Taux d’Incidents Opérationnels',
+        safetyMetric1Value: 'Quasi Nul',
+        safetyMetric2Label: 'Conformité Réglementaire',
+        safetyMetric2Value: 'Maintenue Strictement',
+        contactTitle: 'Sécurisez votre prochaine escale en Algérie en toute confiance',
+        contactText: 'Partagez votre planning navire et vos besoins opérationnels. Notre équipe répond rapidement avec un plan d’exécution clair.',
+        contactNamePlaceholder: 'Nom complet',
+        contactEmailPlaceholder: 'Email professionnel',
+        contactCompanyPlaceholder: 'Entreprise / Opérateur du navire',
+        contactMessagePlaceholder: 'Indiquez ETA, port, besoins navire et services attendus',
+        contactButton: 'Demander un support opérationnel',
+        footerLeft: '© 2026 Agemed Shipping. Tous droits réservés.',
+        footerRight: 'Des opérations d’agence fiables pour les ports hydrocarbures algériens.'
+      }
+    };
+
+    const bgVideo = document.getElementById('bg-video');
+    const supportsWebm = bgVideo && bgVideo.canPlayType('video/webm; codecs="vp9"') !== '';
+    const videoExt = supportsWebm ? 'webm' : 'mp4';
+    const backgroundSequence = [
+      `./assets/harbor-seq-01.${videoExt}`,
+      `./assets/harbor-seq-02.${videoExt}`,
+      `./assets/harbor-seq-03.${videoExt}`,
+      `./assets/harbor-seq-04.${videoExt}`,
+      `./assets/harbor-seq-05.${videoExt}`,
+      `./assets/harbor-seq-06.${videoExt}`
+    ];
+    let sequenceIndex = 0;
+
+    function playSequenceItem(index) {
+      if (!bgVideo || !backgroundSequence[index]) return;
+      bgVideo.src = backgroundSequence[index];
+      bgVideo.load();
+      bgVideo.play().catch(() => {});
+    }
+
+    if (bgVideo) {
+      playSequenceItem(sequenceIndex);
+      bgVideo.addEventListener('ended', () => {
+        sequenceIndex = (sequenceIndex + 1) % backgroundSequence.length;
+        playSequenceItem(sequenceIndex);
+      });
+      bgVideo.addEventListener('error', () => {
+        sequenceIndex = (sequenceIndex + 1) % backgroundSequence.length;
+        playSequenceItem(sequenceIndex);
+      });
+    }
+
+    const titleTag = document.querySelector('title');
+    const descTag = document.querySelector('meta[name="description"]');
+    const i18nNodes = document.querySelectorAll('[data-i18n]');
+    const i18nPlaceholders = document.querySelectorAll('[data-i18n-placeholder]');
+    const localeButtons = document.querySelectorAll('.locale-btn');
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    function closeMobileMenu() {
+      if (!mobileMenu || !mobileMenuToggle) return;
+      mobileMenu.classList.add('hidden');
+      mobileMenuToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    if (mobileMenuToggle && mobileMenu) {
+      mobileMenuToggle.addEventListener('click', () => {
+        const isHidden = mobileMenu.classList.toggle('hidden');
+        mobileMenuToggle.setAttribute('aria-expanded', String(!isHidden));
+      });
+
+      mobileMenu.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => closeMobileMenu());
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) closeMobileMenu();
+      });
+    }
+
+    function setLocale(locale) {
+      const dict = i18n[locale] || i18n.en;
+      document.documentElement.lang = locale;
+      titleTag.textContent = dict.pageTitle;
+      descTag.setAttribute('content', dict.pageDescription);
+
+      i18nNodes.forEach((node) => {
+        const key = node.getAttribute('data-i18n');
+        if (dict[key]) node.textContent = dict[key];
+      });
+
+      i18nPlaceholders.forEach((node) => {
+        const key = node.getAttribute('data-i18n-placeholder');
+        if (dict[key]) node.setAttribute('placeholder', dict[key]);
+      });
+
+      localeButtons.forEach((btn) => {
+        const active = btn.getAttribute('data-locale') === locale;
+        btn.classList.toggle('bg-brand-500/80', active);
+        btn.classList.toggle('text-white', active);
+        btn.classList.toggle('text-slate-300', !active);
+      });
+
+      localStorage.setItem('locale', locale);
+    }
+
+    localeButtons.forEach((btn) => {
+      btn.addEventListener('click', () => setLocale(btn.getAttribute('data-locale')));
+    });
+
+    const browserLocale = navigator.language && navigator.language.toLowerCase().startsWith('fr') ? 'fr' : 'en';
+    const savedLocale = localStorage.getItem('locale');
+    setLocale(savedLocale || browserLocale);
+  </script>
+</body>
+</html>
